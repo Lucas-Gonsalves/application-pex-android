@@ -1,37 +1,48 @@
-# Agenda 05 — TechFlow
+# application-pex-android
 
-Aplicativo Flutter desenvolvido para demonstrar os requisitos da atividade acadêmica **Agenda 05 — Aplicativo Flutter**.
+Aplicação Flutter para Android da MOVE Distribuidora Solar, desenvolvida para a atividade acadêmica. A tela principal reproduz a página institucional de referência e adapta as seções para rolagem e larguras de celular.
 
-## Tema
+## Tecnologias
 
-O TechFlow simula um pequeno portal de notícias sobre tecnologia, programação, desenvolvimento mobile, inteligência artificial e Flutter.
+- Flutter e Dart.
+- url_launcher para abrir os canais oficiais da MOVE.
+- Assets locais para a logo e as fotografias.
 
-## Requisitos atendidos
+## Executar
 
-- Scaffold, AppBar e Drawer para estrutura e navegação.
-- Stack na seção de destaque da página inicial.
-- Duas páginas: Início e Sobre.
-- Componentes de layout como Container, Column, Row, Padding, Center, Align, Text, Icon e Card.
-- MediaQuery para responsividade simples.
-- Dados estáticos/mockados, sem API, login, banco de dados ou backend.
+Instale as dependências com o Flutter SDK:
 
-## Como executar
+        flutter pub get
 
-Com o Flutter SDK instalado:
+Para abrir a versão web de apresentação:
 
-```bash
-flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
-```
+    flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
 
-Depois acesse:
+Depois acesse http://localhost:8080.
 
-```text
-http://localhost:8080
-```
+Para executar em um dispositivo ou emulador Android conectado ao ambiente, use flutter run -d <id-do-dispositivo>. Para gerar um APK de depuração, use:
 
-Também é possível validar com:
+    flutter build apk --debug
 
-```bash
-flutter analyze
-flutter test
-```
+## Canais oficiais
+
+- WhatsApp: https://wa.me/554734400866
+- Instagram: https://www.instagram.com/movedistribuidorasolar?exln=MXdoOThreXFlZGZuMA==
+- Facebook: https://www.facebook.com/share/1BFoW9Lywf/
+- LinkedIn: https://www.linkedin.com/company/move-distribuidora-solar/home/
+
+O botão de contato e a linha do WhatsApp abrem a mesma conversa. As três redes sociais abrem seus perfis oficiais.
+
+## Recursos visuais
+
+- Logo MOVE: web/logo/logo-move.png (arquivo disponibilizado no projeto).
+- Logo de rodapé para fundo escuro: web/logo/logo-move-footer.png, derivada do original com a tipografia azul em branco e o amarelo oficial preservado.
+- Fotos fornecidas da empresa: web/images/move-guaramirim-matriz.png (Portfólio) e web/images/move-tubarao-cd.png (Contato). O Flutter as inclui no bundle mobile como assets locais.
+- Foto de pôr do sol da Home: foto de Bernd Dittrich, disponível em [Unsplash](https://unsplash.com/photos/solar-farm-in-rural-landscape-bheTycKOh9Q) e empacotada em assets/images/solar-sunset.jpg.
+
+As três fotografias usadas pela aplicação são empacotadas localmente, sem depender de conexão à internet. Os ícones das redes sociais são desenhados com widgets Flutter.
+
+## Análise e testes
+
+    flutter analyze
+    flutter test

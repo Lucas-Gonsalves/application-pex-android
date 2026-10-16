@@ -1,5 +1,5 @@
-name: app
-description: "A new Flutter project."
+name: application_pex_android
+description: "Aplicação Android Flutter da MOVE Distribuidora Solar para atividade acadêmica."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  url_launcher: ^6.3.3
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -56,6 +58,13 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - web/logo/logo-move.png
+    - web/logo/logo-move-footer.png
+    - web/images/move-guaramirim-matriz.png
+    - web/images/move-tubarao-cd.png
+    - assets/images/solar-sunset.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
