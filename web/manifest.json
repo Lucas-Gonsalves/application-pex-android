@@ -1,11 +1,11 @@
 {
-    "name": "app",
-    "short_name": "app",
+    "name": "MOVE",
+    "short_name": "MOVE",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#082858",
+    "description": "Conheça a MOVE Distribuidora Solar e suas soluções em energia solar.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

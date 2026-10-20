@@ -1,37 +1,29 @@
-# Agenda 05 — TechFlow
+# application-pex-android
 
-Aplicativo Flutter desenvolvido para demonstrar os requisitos da atividade acadêmica **Agenda 05 — Aplicativo Flutter**.
+Aplicação mobile desenvolvida em Flutter e Dart como projeto PEX da faculdade Católica. Apresenta a MOVE Distribuidora Solar, seu portfólio e seus canais oficiais de contato, com interface baseada na identidade visual da empresa.
 
-## Tema
+## Tecnologias
 
-O TechFlow simula um pequeno portal de notícias sobre tecnologia, programação, desenvolvimento mobile, inteligência artificial e Flutter.
+- Flutter e Dart
+- `url_launcher` para abrir links externos
 
-## Requisitos atendidos
+## Executar
 
-- Scaffold, AppBar e Drawer para estrutura e navegação.
-- Stack na seção de destaque da página inicial.
-- Duas páginas: Início e Sobre.
-- Componentes de layout como Container, Column, Row, Padding, Center, Align, Text, Icon e Card.
-- MediaQuery para responsividade simples.
-- Dados estáticos/mockados, sem API, login, banco de dados ou backend.
+Na raiz do repositório, com o Flutter SDK instalado:
 
-## Como executar
-
-Com o Flutter SDK instalado:
-
-```bash
+```sh
+flutter pub get
 flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
 ```
 
-Depois acesse:
+A versão web fica disponível em http://localhost:8080. Para executar em um dispositivo ou emulador Android conectado, use `flutter run -d <id-do-dispositivo>`.
 
-```text
-http://localhost:8080
-```
+Os links oficiais usados pela aplicação são [WhatsApp](https://wa.me/554734400866), [Instagram](https://www.instagram.com/movedistribuidorasolar?exln=MXdoOThreXFlZGZuMA==), [Facebook](https://www.facebook.com/share/1BFoW9Lywf/) e [LinkedIn](https://www.linkedin.com/company/move-distribuidora-solar/home/). A foto da tela inicial é de [Bernd Dittrich, via Unsplash](https://unsplash.com/photos/solar-farm-in-rural-landscape-bheTycKOh9Q).
 
-Também é possível validar com:
+## Verificações
 
-```bash
-flutter analyze
+```sh
+flutter analyze lib test
 flutter test
+flutter build apk --debug
 ```
