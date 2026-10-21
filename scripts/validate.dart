@@ -20,5 +20,5 @@ Future<void> main() async {
     'scripts',
   ]);
   await runCommand('flutter', const <String>['test']);
-  print('\nValidação concluída com sucesso.');
+  report('\nValidação concluída com sucesso.');
 }

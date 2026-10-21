@@ -55,6 +55,10 @@ void requireFile(String path) {
   stdout.writeln('Artefato gerado: $path');
 }
 
+void report(String message) {
+  stdout.writeln(message);
+}
+
 void requireAndroidReleaseSigning() {
   final propertiesFile = File('android/key.properties');
   if (!propertiesFile.existsSync()) {
