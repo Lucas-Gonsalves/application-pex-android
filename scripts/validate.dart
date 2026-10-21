@@ -4,7 +4,10 @@ Future<void> main() async {
   requireProjectRoot();
   await requireFlutter();
   await requireDart();
-  await runCommand('flutter', const <String>['pub', 'get']);
+  await runCommand(
+    'flutter',
+    const <String>['pub', 'get'],
+  );
   await runCommand(
     'dart',
     const <String>[
@@ -20,6 +23,9 @@ Future<void> main() async {
     'flutter',
     const <String>['analyze', 'lib', 'test', 'scripts'],
   );
-  await runCommand('flutter', const <String>['test']);
+  await runCommand(
+    'flutter',
+    const <String>['test'],
+  );
   print('\nValidação concluída com sucesso.');
 }

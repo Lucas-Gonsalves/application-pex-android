@@ -91,8 +91,9 @@ void requireAndroidReleaseSigning() {
     fail('android/key.properties não contém todos os dados da assinatura.');
   }
 
+  final androidAppUri = Directory('android/app').absolute.uri;
   final storeFile = File.fromUri(
-    Directory('android/app').absolute.uri.resolve(properties['storeFile']!),
+    androidAppUri.resolve(properties['storeFile']!),
   );
   if (!storeFile.existsSync()) {
     fail('O arquivo de chave configurado em android/key.properties não existe.');
