@@ -75,8 +75,9 @@ void requireAndroidReleaseSigning() {
       continue;
     }
 
-    properties[trimmedLine.substring(0, separator).trim()] =
-        trimmedLine.substring(separator + 1).trim();
+    properties[trimmedLine.substring(0, separator).trim()] = trimmedLine
+        .substring(separator + 1)
+        .trim();
   }
 
   const requiredProperties = <String>[
@@ -96,7 +97,9 @@ void requireAndroidReleaseSigning() {
     androidAppUri.resolve(properties['storeFile']!),
   );
   if (!storeFile.existsSync()) {
-    fail('O arquivo de chave configurado em android/key.properties não existe.');
+    fail(
+      'O arquivo de chave configurado em android/key.properties não existe.',
+    );
   }
 }
 
